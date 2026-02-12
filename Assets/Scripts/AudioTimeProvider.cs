@@ -44,12 +44,14 @@ public class AudioTimeProvider : MonoBehaviour
             startTime = Time.time + 5;
             Time.timeScale = _speed;
             Time.captureFramerate = 120;
+            Time.fixedDeltaTime = 1.0f / 120.0f;
         }
         else
         {
             startTime = Time.realtimeSinceStartup + (float)seconds;
             speed = _speed;
             Time.captureFramerate = 0;
+            Time.fixedDeltaTime = 0.02f;
         }
 
         isStart = true;
