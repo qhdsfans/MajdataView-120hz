@@ -43,7 +43,7 @@ public class AudioTimeProvider : MonoBehaviour
         {
             startTime = Time.time + 5;
             Time.timeScale = _speed;
-            Time.captureFramerate = 60;
+            Time.captureFramerate = 120;
         }
         else
         {
